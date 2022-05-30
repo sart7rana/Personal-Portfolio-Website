@@ -1,0 +1,201 @@
+/*Universal section starts here*/
+/*Root color*/
+:root{
+    --green: #889133;
+}
+
+*{
+    font-family: sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--green);
+    color: #333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--green);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+/*Universal section ends here*/
+
+/*--Header section starts here --*/
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 350px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 210px;
+    width: 210px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 7px solid var(--green);
+}
+
+header .user .name{
+    font-size: 30px;
+    color: #fff;
+}
+
+header .user .post{
+    font-size: 25px;
+    color: #eee;
+}
+
+header .navbar{
+    width: 80%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 20px 30px;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+header .navbar ul li a:hover{
+    background: var(--green);
+}
+
+/*Header section ends here*/
+
+/*--Home page section starts--*/
+
+.home{
+    display: flex;
+    justify-content:  center;
+    flex-flow: column;
+    padding: 170px;
+}
+
+.home h1 span{
+    color: var(--green);
+}
+
+/*Home page section ends here*/
+
+/*--CV page section starts--*/
+
+.CV .row .counter .box{
+    width: 400px;
+    background: #222;
+    text-align: center;
+    padding:20px;
+    margin: 10px;
+}
+/*CV page section ends here*/
+
+
+/*--Research page section starts--*/
+
+.Research .box-container .box{
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    margin: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid var(--green);
+}
+
+.Research .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*Research page section ends here*/
+
+
+/*--Contact us page section starts--*/
+.contact .row form{
+    flex: 1 1 450px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.contact .row form .box{
+    padding: 10px;
+    margin: 10px;
+    background: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.contact .row form .message{
+    height: 200px;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: var(--green);
+}
+
+/*Contact us page section ends here*/
+
+/* For scroll top button*/
+.top{
+    position: fixed;
+    bottom: 75px; right: 20px;
+    z-index: 100;
+}
+
+/*For footer section*/
+.footer a{
+    color: var(--green);
+}
+
+
+    
+
+
+
+
+
+
+

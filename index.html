@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <meta name="description" content="Website for Coursework"/>
+    <meta name="keywords" content="Portfolio Website"/>
+    <meta name="author" content="Sarthak Bikram Rana">
+
+    <!-- External css file link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Internal css -->
+    <style type="text/css">
+
+
+    section{
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    .btn{
+        padding: 7px 30px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 1rem;
+        font-size: 30px;
+        border-radius: 50px;
+    }
+
+    .btn i{
+        padding: 0 2px;
+        font-size: 1.8rem;
+    }   
+
+    .btn:hover{
+        background: var(--green);
+    }
+
+    .home h3{
+        font-size: 55px;
+        color: #fff;
+    }
+
+    .home h1{
+        font-size: 75px;
+        color: #fff;
+    }
+
+    .home p{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px 0;
+    }
+
+    .heading{
+        text-align: center;
+        margin:0 60px;
+        font-size: 70px;
+        padding: 10px;
+        border-bottom: 1px solid #fff4;
+        color: #fff;
+    }
+
+    .heading span{
+        color: var(--green);
+    }
+
+    .CV .row .info h3{
+        font-size: 30px;
+        color: var(--green);
+        padding: 5px;
+        font-weight: normal;
+    }
+
+    .CV .row .info h3 span{
+        color: #eee;
+        padding: 5px;
+    }
+
+    .CV .row .counter .box span{
+        font-size: 40px;
+        color: var(--green);
+    }
+
+    .CV .row .counter .box h3{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .Blog h1{
+        font-size: 70px;
+        color: #fff;
+        color: var(--green);
+        padding: 2px;
+        margin: 10px;
+    }
+
+    .Blog h3{
+        font-size: 50px;
+        color: #fff;
+        color: var(--green);
+        padding: 2px;
+        margin: 10px;
+    }
+
+    .Blog h2{
+        font-size: 30px;
+        color: #fff;
+        color: var(--green);
+        padding: 2px; 
+        margin: 10px;
+    }
+
+    .Blog p{
+        font-size: 18px;
+        color: #fff;
+        padding: 7px;
+        margin: 10px;
+    }
+
+    .Research h2{
+        font-size: 40px;
+        color: #fff;
+        color: var(--green);
+        padding: 2px; 
+        margin: 10px;
+    }
+
+    /*for paragraph*/
+
+    .Research p{
+        font-size: 20px;
+        color: #fff;
+        padding: 7px;
+        margin: 10px;
+    }
+
+    .slider {
+        width: 90%;
+        height: 400px;
+        margin: 30px auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 2px solid var(--green);
+        }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact .row .content .info h3{
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        color: #eee;
+        padding: 5px 0;
+        font-weight: normal;
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- header section starts -->
+    <header>
+        <div class="user">
+            <img src="images/user.jpg" alt="">
+            <h3 class="name">Sarthak Bikram Rana</h3>
+            <p class="post">Student</p>
+        </div>
+
+        <!-- Coding for navigation bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#CV">CV</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header section ends -->
+
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+
+        <h3>HI there!</h3>
+        <h1>I'M <span>Sarthak Bikram Rana</span></h1>    
+        <p>This is my portfolio website.</p>  
+        <a href="#contact"><button class="btn">Contact Me<i class="fas fa-user"></i></button></a>
+        <p id="date"></p>  
+
+        <!-- Internal JavaScript for displaying date and time -->
+        <script type="text/javascript">
+            function display_date() 
+                {
+                    document.getElementById('date').innerHTML = Date();
+                    setTimeout(display_date,1000)
+                }
+
+                display_date();
+        </script>
+
+    </section>
+    <!-- home section ends -->
+
+    <!-- CV section starts -->
+    <section class="CV" id="CV">
+
+        <h1 class="heading"> <span>CV</span></h1>
+
+        <div class="row" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 1px;">
+
+            <!-- CV info starts here -->
+            <div class="info" style="flex: 1 1 480px; padding: 25px; padding-left: 70px;">
+                <h3> <span> Name: </span> Sarthak Bikram Rana </h3>
+                <h3> <span> Age: </span> 20 </h3>
+                <h3> <span> Qualification: </span> SEE & Plus 2 </h3>
+                <h3> <span> Address: </span> Chhetrapati, Kathmandu, Nepal </h3>
+                <h3> <span> Language: </span> English & Nepali </h3>
+                <a href="#"><button class="btn"> Download CV <i class="fas fa-homepage"></i> </button></a>
+            </div>
+
+            <!-- Creating seperate box for general info section -->
+            <div class="counter" style="flex: 1 480px; display: flex; justify-content: center; flex-wrap: wrap;">
+
+                <div class="box">
+                    <span>About Me</span>
+                    <h3>I am an IT student in Islington College.</h3>
+                </div>
+
+                <div class="box">
+                    <span>Education</span>
+                    <h3>SEE in 2017 from Shuvatara School. Plus 2 in 2020 from Ullens School</h3>
+                </div>
+
+                <div class="box">
+                    <span>Hobbies</span>
+                    <h3>Travelling, Playing FPS games, Community Service</h3>
+                </div>
+
+                <div class="box">
+                    <span>Skills</span>
+                    <h3>Adaptavility, Teamwork, Self-Control, Multitasking</h3>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- CV section ends -->
+
+    <!-- Blog section starts -->
+    <section class="Blog" id="Blog">
+
+        <h1 class="heading"> <span>Blog</span></h1>
+
+        <!-- For image slider -->
+        <div class="slider">
+    
+            <div id="img">
+                <img src="images/e.jpg">
+            </div>
+    
+        </div>
+
+        <!-- External javascript for image slider -->
+        <script type="text/javascript" src="JavaScript/script.java"></script>
+
+        <!-- Blog contents starts here -->
+        <div class="row">
+
+                <h3>Technologies:</h3>
+                <p>- Technology is constantly evolving at such a rapid pace in this day and age. A technology or programming language that is popular this week may be obsolete in a matter of days. As more funds are invested in research and development, computer scientists and professionals are constantly tweaking and improving existing technologies to make the most of them.</p>
+                <p>Here are some of the most recent trending technologies that will undoubtedly dominate the IT industry in 2021 and the years ahead.</p>
+
+                <h2>1. Artificial Intelligence</h2>
+                <p>- Artificial intelligence (AI) is a technology that allows computers to make decisions in the same way that humans do. When AI programs are fed to systems, the aim is to imitate human intelligence for complex tasks such as pattern recognition, speech recognition, weather forecasting, and medical diagnosis.</p>
+                <p>Navigation-based apps like Uber, voice assistants like Siri, video streaming platforms like Netflix, IoT computers, and search engines like Google and Bing all make use of AI. AI aids in the automation of activities such as traffic, train scheduling, market forecasting, and the construction of driverless cars.</p>
+
+                <h2>2. Data Science</h2>
+                <p>- Data Science is, unsurprisingly, next in the list of the most recent technological principles. Data Science is a technology that aids in the interpretation of complex data. Companies generate a massive amount of data every day. This includes company records, sales information, customer profiles, server information, and financial figures.</p>
+                <p>The majority of this data is in the form of massive unstructured data sets. Data scientists are responsible for converting these unstructured data sets into structured datasets. These data sets can then be analyzed to find patterns and trends. These patterns are useful for understanding the company's business performance, customer retention, and how to improve these areas.</p>
+
+                <h2>3. Internet of Things</h2>
+                <p>- The Internet of Things (IoT) refers to a network of interconnected devices. Their devices can communicate with one another and exchange data. These devices can be linked via WiFi and exchange information about their surroundings and use. This exchange is made possible by a computer chip in these devices.</p>
+                <p>IoT allows not only the connection of various devices, but also their remote access. For example, we can lock your car doors remotely and heat up our ovens. IoT technology is also used for the FitBit, which you use to watch how many calories you burn. IoT chips found in computers assist companies in assessing system efficiency and assisting in machine maintenance.</p>
+
+                <h2>4. Edge Computing</h2>
+                <p>- Edge computing is the newest technology development that is rapidly gaining popularity. The technology is focused on the idea of putting processing resources as close to the data source as possible. This aids in bandwidth and latency reduction.</p>
+                <p>The technology aims to run fewer processes in the cloud and move them to locations such as the user's system or an edge server. Bridging the gap between data and computation reduces long distance communication between the server and the client, increasing the process's speed. Edge computing is however used to handle time-sensitive data which is stored in remote locations with limited connectivity to the central location. The technology will speed up cloud computing and IoT devices.</p>
+
+                <h2>5. Virtual Reality</h2>
+                <p>- VR is a technology that allows you to submerge yourself in a realistic environment. It is the use of computer technology to simulate an environment. It is widely used for playing computer games. In comparison to earlier games in which you experience the gaming environment by viewing it on the screen, you are placed directly in the environment.</p>
+                <p>VR technology is not only used for entertainment or gaming purposes, but it is also used for training by the United States Navy and Coast Guard. They use a virtual reality game called VirtualShip. Doctors use augmented reality and virtual reality while performing surgery. Visitors to an amusement park or museum can use technology to enhance their experience as well.</p>
+
+
+                <h3>Positive impact of technology:</h3>
+                <p>- Technology is becoming part of our daily life. We are fully dependent in technology, since its evolving and making our life easy. It plays a vital role for business, education and communication. These are fields where technology has made a huge impact.</p>
+
+                <h2>1. Business</h2>
+                <p>We live in a capitalist society, which means that many technological advances are made by businesses looking to improve their products and services or their ability to market their products and services. It evolves and improves business strategies, it also helps in easier communication between workers of any organization and maintain a healthy communication among its clients. It helps business to promote them as well as for their advertising.</p>
+
+                <h2>2. Education</h2>
+                <p>Many more people and fields have benefited from technology than just the business community. One overlooked benefit of technological advancement over the last few decades is the impact it has had on education. Online classes are now possible thanks to technological advancements. Students and teachers can research on any topic, it is only possible through internet which is a form of technology.</p>
+
+                <h2>3. Communication</h2>
+                <p>Over the years, both business and personal communication have advanced by leaps and bounds. One of the most significant advances in communication technology have been data retrieval and information sharing. Fax, telegrams, phone calls, emails, text messages, and a variety of other technologies have all had an effect on our ability to communicate with one another. Computers and smartphones, on the other hand, have made it possible to distribute content with equal ease.</p>
+
+                <h2>4. It makes everyday life better</h2>
+                <p>While much technology has been created for profit or to increase a company's ability to produce profit, the majority of it has been developed for the customer's benefit. When it comes down to it, though, technology actually makes day-to-day life easier. Technology has made transportation and household much easier. We can book cabs through our smartphones from anywhere. For over two centuries, the train has been a dependable mode of transportation. Now, most of the countries have metro service which is only possible through technology. In household the internet of things has made it possible for households to link all of their electronic devices to a single network, allowing users to access them remotely from their smartphones.</p>
+
+                <h3>Negative impact of technology:</h3>
+                <p>- Technology is out of control. Even if we only use the term to refer to computing technology, it is still something that is constantly growing and evolving. Of course, technology is much larger than that.</p>
+
+                <h2>1. Physical Effect</h2>
+                <p>The negative effects of technology on person's physical health are probably the most easily quantifiable of all the negative effects of technology. The most frequently cited health effect of technology use has been metabolic diseases caused by unhealthy lifestyles encouraged by technology use. Sitting with a digital device not only reduces the amount of physical movement required to stay healthy, but it also encourages more snacking, all of which leads to obesity, among other illnesses. Constant sitting also causes back and neck issues.</p>
+
+                <h2>2. Mental Health</h2>
+                <p>Over use of smartphones and computers which are form of technology leads to mental health problem of a person. It establish stress in a persons memory pathways in the brain. The use of social media has been shown to be directly related to depression and anxiety.</p>
+
+                <h2>3. Social Health</h2>
+                <p>Humans are social animals who have lived in social groups for millennia. The social recluse has always been an outlier rather than the norm, until the Internet and social media, which were designed to bring people together, physically isolated us from one another. It has been claimed that our children are losing social skills as a result of their excessive use of technology. Children would rather chat on an online platform than meet up with a friend in person.</p>
+
+                <h3> Overall Verdict: </h3>
+                <p>In my opinion, technology has become part of out life from the time of waking up from the bed to going for a sleep. We humans are fully dependent on technology. I think he extensive dependency on technology is making humanity less intelligent. We humnas are not being able to use our brain capacity to the full potential since the term technology was invented. Technology has its own positive and negative impact on our life. We all should be wise enough to choose it properly.</p>
+
+        </div>
+
+    </section>  
+
+    <!-- Blog section ends -->
+
+    <!-- Research section starts -->
+    <section class="Research" id="Research">
+
+        <h1 class="heading"> <span>Research</span></h1>
+
+        <!-- Contact form reference -->
+        <div class="box-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+
+            <div class="box">
+                <a href="https://islington.edu.np/contact/" target="_blank">
+                    <img src="images/contact.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="images/mycontact.jpg" alt="">
+            </div>
+
+            <h2>Contact Form</h2>
+            <p>- I borrowed the contact us page from the website of Inslington College. The first image is from the website of Islington College. The form was quite simple for the user, so I created a look alike form. In the second image, I used my own CSS based on my own website design, which included background color, form color, and many other elements. For the form validation, I also used JavaScript.</p>
+
+        </div>
+        
+        <!-- Navigation bar reference -->
+        <div class="box-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+
+            <div class="box">
+                <a href="http://seed.com.np/" target="_blank"> 
+                    <img src="images/navigation.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="images/mynavigation.jpg" alt="">
+            </div>
+ 
+            <h2>Navigation Bar</h2>
+            <p>- I got the idea for the navigation bar from the seed.np website. The first image is from the seed website, which had a very simple navigation bar. The font, color scheme, and hover effect were also fairly simple, so I considered creating something similar. However, on my website, instead of placing the navigation bar at the top of the page, I placed it on the right side of the page by using CSS's z-index. According to the design of my website, I kept the color of the navigation bar simple and in grey. </p>
+            
+        </div>
+
+        <!-- Blog paragraph reference -->
+        <div class="box-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+
+            <div class="box">
+                <a href="https://www.brainspire.com/" target="_blank">
+                    <img src="images/blog.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="images/myblog.jpg" alt="">
+            </div>
+
+            <h2>Blog Paragrapgh</h2>
+            <p>- While writing the paragraph on the Blog page, I referred to a website called Brainspire. Because of the color used to write the paragraphs on the website, the contents were very easy to read. For the content, the website used three different colors, including gray and orange for the title and black for the paragraph. I used the same concept on my website. I used green for the title and white for the paragraph which makes the content more easy to read.</p>
+            
+        </div>
+
+        <!-- Home page reference -->
+        <div class="box-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+
+            <div class="box">
+                <a href="https://adeolaadeoti.netlify.app/" target="_blank">
+                    <img src="images/home.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="images/myhome.jpg" alt="">
+            </div>
+
+            <h2>Home Page</h2>
+            <p>- While creating the home page for my website, I looked at various portfolio websites for inspiration. After doing some internet research, I came across a portfolio website that matched the design of my website. That website's home page was straightforward and appealing. The website's home page did not have a lot of bulky content. It only had the name, a brief description, and a button that led to the hire me page. I used the same concept in my website, but with my own CSS and content. In my website, I provided a short greeting, my name in which I used color changing CSS, a description of what this website is all about, and a button that takes you directly to the CV page.</p>
+            
+        </div>
+
+        <!-- Image slider reference -->
+        <div class="box-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+
+            <div class="box">
+                <a href="http://seed.com.np/" target="_blank">
+                    <img src="images/slider.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <img src="images/myslider.jpg" alt="">
+            </div>
+
+            <h2>Image Slider</h2>
+            <p>- To make my blog page more visually appealing, I intended to use an image silder for all of the images from various topics. To get a general idea of how an image slider works and how to make one, I went back to the same website where I got the idea for the navigation bar that was seeded. ok. This website featured a visually appealing image slider in the center of the screen. I used CSS and JavaScript to create an image slider on my website which keeps changing image every four seconds. </p>
+            
+        </div>
+           
+    </section>
+
+    <!-- Research section ends -->
+    
+    <!-- Contact Us section starts -->
+    <section class="contact" id="contact" >
+
+        <h1 class="heading"> <span>Contact us</span></h1>
+
+        <!-- Coding for Contact page starts here -->
+        <div class="row" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+
+            <div class="content" style="flex: 1 1 300px; padding: 60px; padding-bottom: 100px; ">
+
+                <!-- Contact details starts here -->
+                <h3 class="title">contact info</h3>
+
+                <div class="info">
+                    <h3>sarthakbrana@gmail.com</h3>
+                    <h3>+977 9884069364</h3>
+                    <h3>Kathmandu, Nepal.</h3>    
+                </div> 
+                
+            </div>
+
+            <!-- Form starts here -->
+            <!-- When the form is submitted the internal JavaScript will be activated -->
+            <form name="myForm" onsubmit="validateForm()"> 
+                <input type="text" placeholder="Name" name="fullname" class="box">
+                <input type="email" placeholder="Email" name="email" class="box">
+                <input type="text" placeholder="Phone Number" name="PhoneNumber" class="box">
+                <textarea id="" cols="30" rows="10" name="box message" placeholder="Message" class="box message"></textarea>
+                <button type="submit" class="btn" > Submit </button>
+            </form> 
+
+            
+            <!-- Internal JavaScript for form validation -->
+            <script type="text/javascript">
+                function validateForm()
+                {
+                    var Name = document.forms["myForm"]["fullname"].value;  
+                    var Email = document.forms["myForm"]["email"].value;
+                    var PhoneNumber = document.forms["myForm"]["PhoneNumber"].value;
+                    var Message = document.forms["myForm"]["box message"].value;
+
+                    if (Name == "" || Email == "" || PhoneNumber == "" || Message == "")
+                    {
+                        alert("The feild: name, email, phone number or message is empty. Please re-try by clicking the close button below. Thankyou!");
+                     }
+                    else
+                    {
+                        alert("Thankyou for signing in.");
+                    } 
+                }
+            </script>
+            
+        </div>
+    </section>
+
+    <!-- Contact Us section ends -->
+
+    <!-- Coding for scroll top icon starts here -->
+    <div class="scroll">
+
+        <a href="#home" class="top">
+            <img src="images/scroll-top-img.png" alt="">
+        </a>
+
+    </div>
+
+    <!-- Footer section starts here -->
+    <div class="footer">
+
+        <!-- Footer contents starts here -->
+        <div style="color: white; font-size: 20px; padding: 25px 10px; text-align: center;">
+        Copyright &copy <a href="">Sarthak Bikram Rana</a> | All right reserved.
+        </div>
+
+    </div>
+
+</body>
+</html>
